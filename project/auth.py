@@ -19,7 +19,7 @@ def login_post():
     signup_query = text('select * from user where email = :user_email')
     user = db.session.execute(signup_query, {'email': email}).all()
 
-   # user = User.query.filter_by(email=email).first()
+   # user = User.query.filter_by(email=email).all()
 
     # check if the user actually exists
     # take the user-supplied password and compare it with the stored password
