@@ -17,7 +17,7 @@ def login_post():
     remember = True if request.form.get('remember') else False
 
     signup_query = text('select * from user where email = :user_email')
-    user = db.session.execute(signup_query, {'email': email}).all()
+    user = db.session.execute(signup_query, {'email': email}).all() 
 
    # user = User.query.filter_by(email=email).all()
 
